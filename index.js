@@ -37,7 +37,7 @@ async function accessUrl(url) {
     // cloudscraperでGETリクエストを送る（クエリパラメーターも付加）
     let response = await cloudscraper.get(url + generateQuery());
     // レスポンスの内容とサイズ（バイト数）をコンソールに出力する（URLも含める）
-    console.log(`Accessed ${url} and got ${response.length} bytes of data:\n${response}`);
+    console.log(`Accessed ${urls} and got ${response.length} bytes of data:\n${response}`);
   } catch (error) {
     // エラーが発生した場合はコンソールに出力する（URLも含める）
     console.error(`Failed to access ${url} due to: ${error.message}`);
