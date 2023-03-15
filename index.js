@@ -64,7 +64,7 @@ async function accessUrlsFromList() {
           });
           console.log(`Accessed ${url} with status code ${response.status} and data size ${response.data.length}`);
         }).catch((error) => {
-          res.send(`Failed to access ${url} due to: ${error.message}`);
+         // res.end(`Failed to access ${url} due to: ${error.message}`);
           console.error(`Failed to access ${url} due to: ${error.message}`);
         });
       }
