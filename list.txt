@@ -1,2 +1,1 @@
-https://tokage.dev
-https://eror
+https://tokage.dev,https://uploader.tokage.dev
