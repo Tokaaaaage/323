@@ -65,7 +65,7 @@ if __name__ == '__main__':
    # リストに記載されているURLのアドレス（変更可）
    
 
-   # 無限ループでURLにアクセスし続ける（1秒ごと）
+   # 無限ループでURLにアクセスし続ける（1秒ごと、ミリ秒で指定したいなら少数で書く）
    while True:
      urls = return_urls()
      for url in urls:
