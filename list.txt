@@ -1,2 +1,1 @@
-https://uploader.tokage.dev
-https://tokage.dev
+https://exit.test
