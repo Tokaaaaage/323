@@ -1,27 +1,24 @@
-
+from flask import Flask
+from threading import Thread
 import requests
 import cloudscraper
 import time
 import random
 import string
-
+# Original Created by GPT-4. Edited&Fixed by Human.
 # keep-alive関数を定義する
+app = Flask('')
+
+@app.route('/')
+def main():
+  return "Your Bot Is Ready"
+
+def run():
+  app.run(host="0.0.0.0", port=8000)
+
 def keep_alive():
-  # webapp.pyというファイルを作り、flaskでサーバーを立ち上げる[^1^][1]
-  from flask import Flask
-  from threading import Thread
-  def run():
-    app.run(host='0.0.0.0',port=8080)
-
-  def keep_alive():
-    t = Thread(target=run)
-    t.start()
-  app = Flask('')
-
-  @app.route('/')
-  def index():
-    return "Hello. I am alive!"
-
+  server = Thread(target=run)
+  server.start()
   
 # リストに記載されているURLを読み込む関数を定義する
 def read_urls(url):
@@ -73,4 +70,4 @@ if __name__ == '__main__':
      urls = return_urls()
      for url in urls:
        access_url(url)
-     time.sleep(10)
+     time.sleep(1)
