@@ -52,8 +52,8 @@ def access_url(url):
     response = scraper.get(url)
     print(f'Accessed {urls} with status code {response.status_code}')
     return response.status_code
-  except Exception as e:
-    print(f'Failed to access {urls} with error {e}')
+  except Exception:
+    print(f'Failed to access {urls} with error')
     return None
 
 # メインの処理部分
